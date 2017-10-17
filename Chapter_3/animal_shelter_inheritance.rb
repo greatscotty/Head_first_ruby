@@ -60,7 +60,7 @@ class Armidillo < Animal
     
     def move(destination)
         puts "#{name} unrolls"
-        puts "#{name} runs to the #{destination}"
+        super(destination)
     end
 end
 
@@ -76,3 +76,7 @@ cat.name = "marley"
 cat.age = 5
 cat.report_age
 cat.talk
+
+bob = Armidillo.new
+bob.name = "Bob"
+bob.move("burrow")
