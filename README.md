@@ -1,0 +1,1 @@
+This repository holds information and practises from the Book "Head First Ruby - A Braind Friendly Guide" by Jay McGavren.
