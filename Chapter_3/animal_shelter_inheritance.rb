@@ -64,13 +64,6 @@ class Armidillo < Animal
     end
 end
 
-dog = Dog.new
-dog.age = 7
-dog.name = "Finn"
-dog.report_age
-dog.talk
-dog.move("bed")
-
 cat= Cat.new
 cat.name = "marley"
 cat.age = 5
