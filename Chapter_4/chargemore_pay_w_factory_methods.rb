@@ -45,6 +45,20 @@ class Employee
 
         attr_reader :hourly_rate, :hours_worked
 
+        def self.security_guard(name)
+            self.new(name, 19.25, 30)
+        end
+
+        def self.cashier(name)
+            self.new(name, 12.75, 25)
+        end
+
+        def self.janitor(name)
+            # edited for 10.50 to 11.50 to conform with validation
+            self.new(name, 11.50, 20)
+        end
+
+
         def initialize (name = "Anonymous", hourly_rate = 11.50, hours_worked = 0)
             super(name)
             self.hourly_rate = hourly_rate
@@ -90,9 +104,14 @@ class Employee
     courtney.hours_worked = 40
 
     cody = HourlyEmployee.new("Cody", 15.00, 40)
+
+    laura = HourlyEmployee.security_guard("Laura")
+    puts cashier = HourlyEmployee.cashier("Cashier").print_pay_stub
+    puts janitor = HourlyEmployee.janitor("Janitor").print_pay_stub
     
     puts amy.print_pay_stub
     puts tammy.print_pay_stub
     puts courtney.print_pay_stub
     puts scott.print_pay_stub
     puts cody.print_pay_stub
+    puts laura.print_pay_stub
