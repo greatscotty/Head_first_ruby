@@ -40,3 +40,15 @@ class Photo
      puts "Showing #{object_id}"
     end
 end
+
+video = Video.new
+video.add_comment("Cool slow motion effect")
+video.add_comment("Weird silence in the middle")
+
+song = Music.new
+song.add_comment("Sweet bass drop")
+
+photo = Photo.new
+photo.add_comment("Beautiful Lighting")
+
+p video.comments, song.comments, photo.comments
