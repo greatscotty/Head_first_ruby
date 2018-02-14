@@ -1,14 +1,11 @@
 #Project: Media 
 # Author: Scott J.
 # Date: Friday 12/08/2017 19:38
+# Last Modified: February 13, 2018 9:48 PM 
 
 module AcceptsComments
     def comments
-        if @comments
-            @comments
-        else 
-            @comment = []
-        end 
+        @comment ||= []
     end 
 
     def add_comment(comment)
@@ -34,11 +31,12 @@ class Music < Clip
 end
 
 class Photo
-
-    def initialize
-        @comment = []
+    include AcceptsComments
+    def intialize
+        @format = 'JPEG'
     end
+
     def show
-        puts "Showing #{object_id}"
+     puts "Showing #{object_id}"
     end
 end
