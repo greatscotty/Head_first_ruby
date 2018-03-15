@@ -12,7 +12,7 @@ class SmallOven
     end
 
     def bake
-        unless state == "On"
+        unless @state == "On"
             raise "your will need to turn the oven on!"
         end
         if @contents == nil
