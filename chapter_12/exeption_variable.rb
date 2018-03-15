@@ -41,5 +41,7 @@ dinner.each do |item|
         oven.turn_on
         # Now with RETRY!!!
         retry
+    ensure
+        oven.turn_off
     end
 end
