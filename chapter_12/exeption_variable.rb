@@ -41,6 +41,7 @@ dinner.each do |item|
         oven.turn_on
         # Now with RETRY!!!
         retry
+        # to ensure it moves smothly and no house fires happen.
     ensure
         oven.turn_off
     end
